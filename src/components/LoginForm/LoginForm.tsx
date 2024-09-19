@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 import { CREATE_TOKEN } from "@/apollo/requests";
+import saveToken from "@/utils/saveToken";
 
 
 export const description =
@@ -43,10 +44,11 @@ function LoginForm() {
         console.error("GraphQL errors:", response.errors);
         return;
       }
+			saveToken(response.data.login);
 			router.push('/my-info');
 		}
 		catch (err) {
-      console.error("Registration error:", err);
+      console.error("Authorization error:", err);
     }
 	}
 

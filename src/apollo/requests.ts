@@ -8,3 +8,12 @@ export const CREATE_TOKEN = gql`
     }
   }
 `;
+
+export const REFRESH_TOKEN = gql`
+  mutation refreshToken ($refreshToken: String!) {
+    refreshToken(refreshToken: $refreshToken) {
+      access_token
+      refresh_token
+    }
+  }
+`;

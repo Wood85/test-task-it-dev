@@ -2,7 +2,7 @@
 
 import { ApolloProvider } from "@apollo/client";
 import client from "@/apollo/client";
-import LoginForm from "@/components/LoginForm/LoginForm";
+import LoginFormPage from "@/components/LoginFormPage/LoginFormPage";
 
 
 export const description =
@@ -12,11 +12,7 @@ export default function Page() {
 
   return (
 		<ApolloProvider client={client}>
-		  <div className="flex items-center justify-items-center min-h-dvh">
-			  <main className="w-full min-h-full flex item-center justify-center ">
-				  <LoginForm />
-	      </main>
-		  </div>
+		  <LoginFormPage />
 	  </ApolloProvider>
   )
 }
