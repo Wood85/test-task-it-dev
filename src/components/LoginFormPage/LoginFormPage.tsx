@@ -33,7 +33,7 @@ const LoginFormPage = () => {
 						}
 						saveToken(response.data.refreshToken);
 						setIsLoading(false);
-						router.push('/my-info');
+						router.replace('/my-info');
 					}
 					catch (err) {
 						console.error("Registration error:", err);
@@ -46,11 +46,11 @@ const LoginFormPage = () => {
 
 	return (
 		<div className="flex items-center justify-items-center min-h-dvh">
-			  <main className="w-full min-h-full flex item-center justify-center ">
-				  {!isLoading && <LoginForm />}
-					{isLoading && 'Loading...'}
-	      </main>
-		  </div>
+			<main className="w-full min-h-full flex item-center justify-center ">
+				{!isLoading && <LoginForm />}
+				{isLoading && 'Loading...'}
+	    </main>
+		</div>
 	)
 }
 

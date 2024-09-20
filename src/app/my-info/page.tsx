@@ -1,9 +1,18 @@
-export default function MyInfo() {
+'use client';
+
+import { ApolloProvider } from "@apollo/client";
+import client from "@/apollo/client";
+
+import MyInfoContainer from "@/components/MyInfoContainer/MyInfoContainer";
+
+
+function MyInfo() {
+
   return (
-		<div className="flex items-center justify-items-center min-h-screen">
-			<main className="w-full min-h-full flex item-center justify-center ">
-				My Info
-	  </main>
-		</div>
+		<ApolloProvider client={client}>
+		  <MyInfoContainer/>
+		</ApolloProvider>
   )
 }
+
+export default MyInfo;

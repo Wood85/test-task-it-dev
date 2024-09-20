@@ -48,7 +48,7 @@ function LoginForm() {
 			router.push('/my-info');
 		}
 		catch (err) {
-      console.error("Authorization error:", err);
+      console.error("Authorization error: ", err);
     }
 	}
 
