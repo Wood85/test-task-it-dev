@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useQuery } from "@apollo/client";
 import { GET_PROFILE } from "@/apollo/requests";
 import { Button } from "@/components/ui/button"
+import Header from "../Header/Header";
 
 interface Props {
 	token: string;
@@ -31,11 +32,14 @@ const MyInfoPage = (props: Props) => {
 
 	return (
 		<div>
-			{data !== undefined && (<div>
-				<div>{data.myProfile.name}</div>
-				<div>{data.myProfile.avatar}</div>
-				<Button variant="outline" onClick={clickHandler}>Logout</Button>
-			</div>)}
+			{data !== undefined && (
+				<div>
+					<Header src={data.myProfile.avatar}/>
+				  <div>{data.myProfile.name}</div>
+				  <div>{data.myProfile.avatar}</div>
+				  <Button variant="outline" onClick={clickHandler}>Logout</Button>
+			  </div>
+		  )}
 		</div>
 	)
 }

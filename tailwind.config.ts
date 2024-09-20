@@ -9,6 +9,12 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+			fontFamily: {
+        inter: ["var(--font-inter)"],
+      },
+			backgroundImage: {
+        'search-image': "url('/src/assets/images/search.svg')",
+      },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -55,7 +61,21 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+			maxWidth: {
+        '8xl': '90rem',
+				'max-w-99': '24.75rem',
+      },
+			spacing: {
+				'9.5': '2.375rem',
+        '21.5': '5.375rem',
+      },
+			width: {
+        '130.75': '32.7rem',
+      },
+			padding: {
+        '19px': '19px',
+      }
   	}
   },
   plugins: [require("tailwindcss-animate")],
