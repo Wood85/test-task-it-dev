@@ -1,6 +1,6 @@
 'use client';
 
-import { MouseEvent, } from "react";
+import { MouseEvent } from "react";
 import { useRouter } from 'next/navigation'
 import { useQuery } from "@apollo/client";
 import { GET_PROFILE } from "@/apollo/requests";

@@ -10,7 +10,7 @@ function MyInfo() {
 
   return (
 		<ApolloProvider client={client}>
-		  <MyInfoContainer/>
+      <MyInfoContainer/>
 		</ApolloProvider>
   )
 }
