@@ -12,6 +12,9 @@ const config: Config = {
 			fontFamily: {
         inter: ["var(--font-inter)"],
       },
+			fontSize: {
+				'2xl': '1.75rem',
+			},
 			backgroundImage: {
         'search-image': "url('/src/assets/images/search.svg')",
       },
@@ -64,17 +67,28 @@ const config: Config = {
   		},
 			maxWidth: {
         '8xl': '90rem',
-				'max-w-99': '24.75rem',
+				'37.5': '9.375rem',
+				'99': '24.75rem',
+      },
+			maxHeight: {
+				'37.5': '9.375rem',
       },
 			spacing: {
 				'9.5': '2.375rem',
         '21.5': '5.375rem',
       },
 			width: {
+				'22.5': '5.625rem',
         '130.75': '32.7rem',
       },
 			padding: {
         '19px': '19px',
+      },
+			height: {
+        '37.5': '9.375rem',
+				'45': '11.25rem',
+				'46': '11.5rem',
+				'50': '12.5rem',
       }
   	}
   },

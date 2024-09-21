@@ -11,7 +11,7 @@ interface Props {
 const Header = (props: Props) => {
 	const {src} = props;
 	return (
-		<header className="h-21.5 w-screen bg-[#FCFCFE] ">
+		<header className="h-21.5 w-screen bg-[#FCFCFE]">
 			<div className="flex items-center justify-between max-w-8xl h-full mx-auto px-6 ">
 				<div className="text-black text-xl font-semibold">HarmonyHR</div>
 				<Menu />

@@ -6,6 +6,7 @@ import { useQuery } from "@apollo/client";
 import { GET_PROFILE } from "@/apollo/requests";
 import { Button } from "@/components/ui/button"
 import Header from "../Header/Header";
+import Info from "../Info/Info";
 
 interface Props {
 	token: string;
@@ -35,8 +36,7 @@ const MyInfoPage = (props: Props) => {
 			{data !== undefined && (
 				<div>
 					<Header src={data.myProfile.avatar}/>
-				  <div>{data.myProfile.name}</div>
-				  <div>{data.myProfile.avatar}</div>
+					<Info src={data.myProfile.avatar} name={data.myProfile.name}/>
 				  <Button variant="outline" onClick={clickHandler}>Logout</Button>
 			  </div>
 		  )}
