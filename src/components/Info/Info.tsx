@@ -16,7 +16,7 @@ const Info = (props: Props) => {
 		<section className="h-46 w-screen bg-[#DAE6F2]">
 			<div className="flex h-full max-w-8xl w-full mx-auto px-16">
 			  <div className="h-full w-1/5 flex items-end justify-center">
-			    <div className='max-h-37.5 max-w-37.5 h-full w-full rounded-full overflow-hidden mr-5'>
+			    <div className='max-h-37.5 max-w-37.5 h-full w-full rounded-full overflow-hidden mr-5 z-10'>
 					  <picture>
 						  <img
                 src={src}

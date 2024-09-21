@@ -89,6 +89,9 @@ const config: Config = {
 				'45': '11.25rem',
 				'46': '11.5rem',
 				'50': '12.5rem',
+      },
+			inset: {
+        '20px': '-20px',
       }
   	}
   },
