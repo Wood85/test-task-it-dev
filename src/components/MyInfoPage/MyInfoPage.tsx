@@ -8,6 +8,7 @@ import { GET_PROFILE } from "@/apollo/requests";
 import Header from "../Header/Header";
 import Info from "../Info/Info";
 import Contacts from "../Contacts/Contacts";
+import Content from "../Content/Content";
 
 interface Props {
 	token: string;
@@ -40,9 +41,14 @@ const MyInfoPage = (props: Props) => {
 					<Info src={data.myProfile.avatar} name={data.myProfile.name}/>
 				  {/* <Button variant="outline" onClick={clickHandler}>Logout</Button> */}
 					<div className="bg-[#F0F3F8] flex grow">
-					  <div className="max-w-8xl w-full mx-auto px-16 relative">
-							<section className="h-full w-[18.5%] flex px-5 absolute -top-4">
-							  <Contacts />
+					  <div className="flex max-w-8xl w-full mx-auto px-16 gap-x-14">
+							<aside className="h-full w-[18.5%] flex px-5 relative">
+								<div className="h-full absolute -top-4">
+								  <Contacts />
+								</div>
+							</aside>
+							<section className="max-w-[1040px] w-full">
+								<Content />
 							</section>
 						</div>
 					</div>

@@ -19,6 +19,11 @@ const config: Config = {
         'search-image': "url('/src/assets/images/search.svg')",
       },
   		colors: {
+				'gray': '#7C96B1',
+				'light-blue': '#DAE6F2',
+				'dark-blue': '#204973',
+				'blue': '#3758AB',
+				'dark': '#1C3144',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -79,6 +84,7 @@ const config: Config = {
       },
 			width: {
 				'22.5': '5.625rem',
+				'37.5': '9.375rem',
         '130.75': '32.7rem',
       },
 			padding: {

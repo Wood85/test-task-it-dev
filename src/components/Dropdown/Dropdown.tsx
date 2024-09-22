@@ -14,11 +14,14 @@ interface Props {
 
 const Dropdown = (props: Props) => {
 	const { title, list } = props;
+
 	return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="flex items-center w-full h-full border border-[#7C96B1] rounded-lg justify-around outline-0">
-			{title}
-				<ArrowDownIcon/>
+      <DropdownMenuTrigger className="flex items-center w-full h-full border border-[#7C96B1] rounded-lg justify-between outline-0 pl-2">
+			  {title}
+				<div className="flex items-center px-2 h-full bg-light-blue rounded-r-lg">
+				    <ArrowDownIcon/>
+				  </div>
 			</DropdownMenuTrigger>
       <DropdownMenuContent>
 				{list.map((item) => <DropdownMenuItem key={crypto.randomUUID()}>{item}</DropdownMenuItem>)}

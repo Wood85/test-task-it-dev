@@ -26,7 +26,7 @@ function MyInfoContainer() {
 	}, [router]);
 
   return (
-		<div className="flex min-h-screen">
+		<div className="flex min-h-screen overflow-x-hidden">
 			<main className="w-full min-h-full flex item-center flex-col">
 				{token !== '' && <MyInfoPage token={token}/>}
 	  </main>
