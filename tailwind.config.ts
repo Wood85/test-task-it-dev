@@ -9,7 +9,21 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+			fontFamily: {
+        inter: ["var(--font-inter)"],
+      },
+			fontSize: {
+				'2xl': '1.75rem',
+			},
+			backgroundImage: {
+        'search-image': "url('/src/assets/images/search.svg')",
+      },
   		colors: {
+				'gray': '#7C96B1',
+				'light-blue': '#DAE6F2',
+				'dark-blue': '#204973',
+				'blue': '#3758AB',
+				'dark': '#1C3144',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -55,7 +69,36 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+			maxWidth: {
+        '8xl': '90rem',
+				'37.5': '9.375rem',
+				'99': '24.75rem',
+      },
+			maxHeight: {
+				'37.5': '9.375rem',
+      },
+			spacing: {
+				'9.5': '2.375rem',
+        '21.5': '5.375rem',
+      },
+			width: {
+				'22.5': '5.625rem',
+				'37.5': '9.375rem',
+        '130.75': '32.7rem',
+      },
+			padding: {
+        '19px': '19px',
+      },
+			height: {
+        '37.5': '9.375rem',
+				'45': '11.25rem',
+				'46': '11.5rem',
+				'50': '12.5rem',
+      },
+			inset: {
+        '20px': '-20px',
+      }
   	}
   },
   plugins: [require("tailwindcss-animate")],

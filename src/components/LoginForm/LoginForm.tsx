@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast"
 
 import { CREATE_TOKEN } from "@/apollo/requests";
 import saveToken from "@/utils/saveToken";
@@ -23,6 +24,7 @@ export const description =
   "A simple login form with email and password. The submit button says 'Sign in'."
 
 function LoginForm() {
+	const { toast } = useToast();
   const [emailValue, setEmailValue] = useState('');
 	const [passwordValue, setPasswordValue] = useState('');
 
@@ -41,14 +43,20 @@ function LoginForm() {
 			});
 
 			if (response.errors) {
-        console.error("GraphQL errors:", response.errors);
+				toast({
+					title: "GraphQL errors:",
+					description: `${response.errors}`,
+				});
         return;
       }
 			saveToken(response.data.login);
 			router.push('/my-info');
 		}
 		catch (err) {
-      console.error("Authorization error: ", err);
+			toast({
+				title: "Authorization error:",
+				description: `${err}`,
+			})
     }
 	}
 

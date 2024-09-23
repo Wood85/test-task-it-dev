@@ -5,10 +5,12 @@ import { useRouter } from 'next/navigation'
 import { useMutation } from "@apollo/client";
 import { REFRESH_TOKEN } from "@/apollo/requests";
 import saveToken from "@/utils/saveToken";
+import { useToast } from "@/hooks/use-toast"
 
 import LoginForm from "../LoginForm/LoginForm";
 
 const LoginFormPage = () => {
+	const { toast } = useToast();
 	const router = useRouter();
 	const [refreshToken, {}] = useMutation(REFRESH_TOKEN);
 
@@ -26,14 +28,21 @@ const LoginFormPage = () => {
 						});
 			
 						if (response.errors) {
-							console.error("GraphQL errors:", response.errors);
+							const err = response.errors;
+							toast({
+								title: "GraphQL errors:",
+								description: `${response.errors}`,
+							});
 							return;
 						}
 						saveToken(response.data.refreshToken);
 						router.replace('/my-info');
 					}
 					catch (err) {
-						console.error("Registration error:", err);
+						toast({
+							title: "Registration error:",
+							description: `${err}`,
+						})
 					}
 				})();
 			}
