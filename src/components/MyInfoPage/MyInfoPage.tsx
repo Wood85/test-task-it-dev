@@ -38,8 +38,8 @@ const MyInfoPage = (props: Props) => {
 			{data !== undefined && (
 				<div className="flex flex-col h-full">
 					<Header src={data.myProfile.avatar}/>
-					<Info src={data.myProfile.avatar} name={data.myProfile.name}/>
-				  {/* <Button variant="outline" onClick={clickHandler}>Logout</Button> */}
+					{/* <Info src={data.myProfile.avatar} name={data.myProfile.name}/>
+				  <Button variant="outline" onClick={clickHandler}>Logout</Button>
 					<div className="bg-[#F0F3F8] flex grow">
 					  <div className="flex max-w-8xl w-full mx-auto px-16 gap-x-14">
 							<aside className="h-full w-[18.5%] flex px-5 relative">
@@ -51,7 +51,7 @@ const MyInfoPage = (props: Props) => {
 								<Content />
 							</section>
 						</div>
-					</div>
+					</div> */}
 			  </div>
 		  )}
 		</div>

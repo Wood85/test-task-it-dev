@@ -16,7 +16,7 @@ import {
 
 const Content = () => {
 	return (
-	  <div className="flex flex-col w-full bg-[#FCFCFE] pb-12">
+	  <div className="flex flex-col w-full bg-[#FCFCFE] pb-24 rounded-b-2xl mb-24">
 			<div className="w-full px-4">
 				<div className="border-b-2 border-gray pt-6 flex justify-between">
 					<div className="flex items-center py-3	gap-2"><TimeOffIcon /><h2 className="text-dark-blue text-xl font-medium">Time Off</h2></div>
