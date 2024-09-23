@@ -11,8 +11,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "HR-Tech",
-  description: "",
+  title: "HarmonyHR",
+  description: "Test Task",
 };
 
 export default function RootLayout({
