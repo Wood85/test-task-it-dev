@@ -29,11 +29,11 @@ const MyInfoPage = (props: Props) => {
 			{data !== undefined && (
 				<div className="flex flex-col h-full">
 					<Header src={data.myProfile.avatar}/>
-					{/* <Info src={data.myProfile.avatar} name={data.myProfile.name}/>
-					<div className="bg-[#F0F3F8] flex grow">
-					  <div className="flex max-w-8xl w-full mx-auto px-16 gap-x-14">
-							<aside className="h-full w-[18.5%] flex px-5 relative">
-								<div className="h-full absolute -top-4">
+					<Info src={data.myProfile.avatar} name={data.myProfile.name}/>
+					<div className="bg-[#F0F3F8] flex grow w-full">
+					  <div className="flex max-w-8xl w-full mx-auto gap-x-3 max-[1320px]:gap-x-[5px] justify-center">
+							<aside className="h-full w-[18.5%] max-[1320px]:w-[250px] flex px-5 relative max-[1210px]:hidden">
+								<div className="h-full w-[calc(100%-40px)] absolute -top-4">
 								  <Contacts />
 								</div>
 							</aside>
@@ -41,7 +41,7 @@ const MyInfoPage = (props: Props) => {
 								<Content />
 							</section>
 						</div>
-					</div> */}
+					</div>
 			  </div>
 		  )}
 		</div>

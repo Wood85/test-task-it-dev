@@ -18,11 +18,11 @@ const Content = () => {
 	return (
 	  <div className="flex flex-col w-full bg-[#FCFCFE] pb-24 rounded-b-2xl mb-24">
 			<div className="w-full px-4">
-				<div className="border-b-2 border-gray pt-6 flex justify-between">
-					<div className="flex items-center py-3	gap-2"><TimeOffIcon /><h2 className="text-dark-blue text-xl font-medium">Time Off</h2></div>
-					<div className="flex items-center py-3 gap-[30px]">
-						<div className="text-black text-sm font-medium pt-2	">Accrual Level Start Date<span className="pl-1 text-blue">03/09-2020</span></div>
-						<div>
+				<div className="border-b-2 border-gray pt-6 max-[600px]:pt-1 flex justify-between w-full">
+					<div className="flex items-center py-3	gap-2 max-[600px]:hidden"><TimeOffIcon /><h2 className="text-dark-blue text-xl font-medium">Time Off</h2></div>
+					<div className="flex items-center py-3 max-[600px]:pb-6 gap-[30px] max-[600px]:gap-[6px] max-[600px]:flex-col max-[600px]:w-full">
+						<div className="text-black text-sm font-medium pt-2	max-[600px]:flex max-[600px]:justify-end max-[600px]:w-full">Accrual Level Start Date<span className="pl-1 text-blue">03/09-2020</span></div>
+						<div className="max-[600px]:flex max-[600px]:justify-end max-[600px]:w-full">
 						  <Popover>
                 <PopoverTrigger className="w-37.5 h-8 text-black text-sm font-medium rounded-lg border border-black flex items-center justify-center">Add Time Off Policy</PopoverTrigger>
                 <PopoverContent>Add Time Off Policy</PopoverContent>
@@ -79,17 +79,17 @@ const Content = () => {
 				</div>
 				<div className="flex flex-col pt-[22px] w-full">
 					<div className="flex items-center gap-2 text-dark-blue text-sm font-medium mb-4"><HistoryIcon />History</div>
-					<div className="flex justify-between items-center mb-4">
-					  <div className="flex items-center gap-4">
-							<div className="w-[256px] h-[33px] text-black">
-							  <SelectInput title="Sick" list={['item-1', 'item-2']} />
-							</div>
-							<div className="w-[95px] h-[33px] text-black">
-							  <SelectInput title="All" list={['item-1', 'item-2']} />
-							</div>
+					<div className="grid grid-cols-[270px_1fr] mb-4 max-[600px]:grid-cols-[1fr] max-[600px]:grid-rows-[34px_34px] max-[600px]:gap-4 max-[600px]:mb-6">
+						<div className="w-[256px] h-[33px] text-black max-[600px]:w-[312px] max-[380px]:w-[100%]">
+							<SelectInput title="Sick" list={['item-1', 'item-2']} />
 						</div>
-						<div className="w-[175px] h-[33px] text-black">
-						<Dropdown title="Balance History" list={['item-1', 'item-2']} />
+						<div className="flex justify-between max-[600px]:justify-start max-[600px]:gap-6 max-[380px]:justify-between">
+						  <div className="w-[95px] h-[33px] text-black max-[600px]:w-[112px]">
+							  <SelectInput title="All" list={['item-1', 'item-2']} />
+						  </div>
+						  <div className="w-[175px] h-[33px] text-black">
+						    <Dropdown title="Balance History" list={['item-1', 'item-2']} />
+						  </div>
 						</div>
 					</div> 
 					<div className="w-full">
