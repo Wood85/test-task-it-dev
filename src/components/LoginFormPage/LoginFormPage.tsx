@@ -28,7 +28,6 @@ const LoginFormPage = () => {
 						});
 			
 						if (response.errors) {
-							const err = response.errors;
 							toast({
 								title: "GraphQL errors:",
 								description: `${response.errors}`,
@@ -47,7 +46,7 @@ const LoginFormPage = () => {
 				})();
 			}
 		}
-	}, [refreshToken, router])
+	}, [refreshToken, router, toast])
 
 	return (
 		<div className="flex items-center justify-items-center min-h-dvh">
