@@ -2,7 +2,7 @@
 
 [link](https://drive.google.com/file/d/1Fsq0nnPA0G1zakcp6Z1SK9h53BqHy_x6/view)
 
-You can take a look this application here - **[test-task](https://mock-app/)**
+You can take a look this application here - **[test-task](https://develop--it-dev.netlify.app/)**
 
 ## Technology stack ⚙️
 
