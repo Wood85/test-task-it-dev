@@ -1,3 +1,6 @@
+import { MouseEvent } from 'react';
+import { useRouter } from 'next/navigation';
+import { Button } from "@/components/ui/button"
 import SettingsIcon from '@/assets/icons/SettingsIcon';
 import QueryIcon from '@/assets/icons/QueryIcon';
 import BellIcon from '@/assets/icons/BellIcon';
@@ -10,6 +13,15 @@ interface Props {
 
 const Header = (props: Props) => {
 	const {src} = props;
+
+	const router = useRouter();
+
+	const clickHandler = (event: MouseEvent<HTMLButtonElement>) => {
+		event.preventDefault();
+    localStorage.setItem('tokenData', '');
+		router.replace('/');
+	}
+
 	return (
 		<header className="h-21.5 w-screen bg-[#FCFCFE] max-[1100px]:h-[50px]">
 			<div className="flex items-center justify-between max-w-8xl h-full mx-auto px-6 ">
@@ -35,6 +47,10 @@ const Header = (props: Props) => {
 						</picture>
 					</div>	
 				</div>
+				<Button 
+				className='order-5 px-[2px] ml-1 border-0 h-12 mt-3 text-black hover:text-blue max-[1100px]:mt-0' 
+				variant="outline" 
+				onClick={clickHandler}>log<br/>out</Button>
 			</div>
 		</header>
 	)
